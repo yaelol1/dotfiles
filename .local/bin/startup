@@ -1,7 +1,7 @@
 #! /bin/sh
 
 internal_monitor=eDP1
-external_monitor=HDMI1
+external_monitor=DP-1
 
 monitor_add() {
 	desktops=4 # How many desktops to move to the second monitor
