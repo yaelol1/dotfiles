@@ -17,6 +17,9 @@ picom -f &
 # wallpaper
 nitrogen --restore &
 
+# mpd
+mpd &
+
 # keyboard
 setxkbmap us -variant colemak &
 
