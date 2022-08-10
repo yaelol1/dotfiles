@@ -88,6 +88,17 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+# apt
+alias update='sudo apt update'
+alias upg='sudo apt update && sudo apt upgrade'
+alias s='apt search'
+alias clean='sudo apt-get remove --purge $(deborphan)'
+alias i='sudo apt install'
+
+
+# batcat
+alias cat='batcat'
+
 # Bare repo for dotfiles
 alias config='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
 
@@ -122,3 +133,6 @@ prompt spaceship
 
 # Spicetify
 export PATH=$PATH:/home/y421/.spicetify
+
+# Syntax highlighting for man
+export PAGER="most"

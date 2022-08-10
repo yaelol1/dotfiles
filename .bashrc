@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 alias config='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
+
