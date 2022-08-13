@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/sh
 
-    $HOME/.config/polybar/launch.sh
-    $HOME/.config/bspwm/scripts/bspwm_reorder
+$HOME/.config/bspwm/scripts/startup
+

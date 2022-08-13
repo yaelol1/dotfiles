@@ -97,10 +97,14 @@ alias i='sudo apt install'
 
 
 # batcat
-alias cat='batcat'
+alias cat='batcat --paging=auto --pager=less'
+
 
 # Bare repo for dotfiles
 alias config='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
+
+# bspwm autorandr for polybar
+alias startup='$HOME/.local/bin/startup'
 
 # Plugins
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

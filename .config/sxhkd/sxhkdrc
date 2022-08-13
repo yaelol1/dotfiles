@@ -123,23 +123,50 @@ super + alt + shift + {h,n,e,i}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+#
+# Power
+#
 
+super + {alt,ctrl,alt + ctrl} + x
+	sudo systemctl {suspend,reboot,poweroff}
+
+
+# 
 # Media keys
+#
+
 XF86AudioLowerVolume
-  pactl set-sink-volume 0 -5%
+ 	 pactl set-sink-volume 0 -5%
 
 XF86AudioRaiseVolume
-  pactl set-sink-volume 0 +5%
+ 	 pactl set-sink-volume 0 +5%
 
 XF86AudioMute
-  pactl set-sink-mute 0 toggle
+  	pactl set-sink-mute 0 toggle
 
+XF86AudioPlay
+	playerctl --player=spotify,%any play-pause
+
+XF86AudioPrev
+	playerctl --player=spotify,%any previous
+
+XF86AudioNext
+	playerctl --player=spotify,%any next
+
+alt + XF86AudioPrev
+	playerctl --player=spotify,%any position 15-
+
+alt + XF86AudioNext
+	playerctl --player=spotify,%any position 15+
+#
 # Brightness
+#
+
 XF86MonBrightnessUp
-  brightnessctl set 10%+
+ 	 brightnessctl set 10%+
   
 XF86MonBrightnessDown
-  brightnessctl set 10%-
+ 	 brightnessctl set 10%-
   
 super + a
-  brightnessctl set 0%
+ 	 brightnessctl set {0,40}%
