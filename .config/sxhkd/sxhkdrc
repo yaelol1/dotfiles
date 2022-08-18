@@ -9,12 +9,20 @@ super + Return
 # program launcher
 super + @space
 	dmenu_run
+
 super + alt + @space
 	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Screenshot
+super + shift + s
+ 	scrot -se 'xclip -selection clipboard -t image/png -i $f'
+# Study 
+super + ctrl + s
+	anki& ; rainbow-board
 
 #
 # bspwm hotkeys

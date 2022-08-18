@@ -94,6 +94,8 @@ alias upg='sudo apt update && sudo apt upgrade'
 alias s='apt search'
 alias clean='sudo apt-get remove --purge $(deborphan)'
 alias i='sudo apt install'
+alias r='sudo apt remove'
+alias ra='sudo apt autoremove'
 
 
 # batcat
