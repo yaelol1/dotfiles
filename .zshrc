@@ -68,15 +68,15 @@ compinit
 # Alias
 # exa - ls
 # general use
-alias ls='exa'                                                          # ls
-alias l='exa -lbF --git'                                                # list, size, type, git
-alias ll='exa -lbGF --git'                                             # long list
-alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
-alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+alias ls='exa  --group-directories-first'                                                          # ls
+alias l='exa -lbF --git  --group-directories-first'                                                # list, size, type, git
+alias ll='exa -lbGF --git  --group-directories-first'                                             # long list
+alias llm='exa -lbGd --git --sort=modified  --group-directories-first'                            # long list, modified date sort
+alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale  --group-directories-first'  # all list
+alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale  --group-directories-first' # all + extended list
 # specialty views
-alias lS='exa -1'                                                              # one column, just names
-alias lt='exa --tree --level=2'                                         # tree
+alias lS='exa -1 --group-directories-first'                                                              # one column, just names
+alias lt='exa --tree --level=2  --group-directories-first'                                         # tree
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -103,7 +103,10 @@ alias cat='batcat --paging=auto --pager=less'
 
 
 # Bare repo for dotfiles
-alias config='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
+alias gitmain='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
+
+# Bare repo for Documents
+alias gitdoc='/usr/bin/git --git-dir=$HOME/Documents/.github --work-tree=$HOME/Documents'
 
 # bspwm autorandr for polybar
 alias startup='$HOME/.local/bin/startup'
