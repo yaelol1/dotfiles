@@ -143,5 +143,10 @@ prompt spaceship
 # Spicetify
 export PATH=$PATH:/home/y421/.spicetify
 
+#exccercism path
+export PATH=~/bin:$PATH
 # Syntax highlighting for man
 export PAGER="most"
+
+# bin in PATH
+export PATH=~/bin:$PATH

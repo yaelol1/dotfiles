@@ -27,4 +27,4 @@ bspc rule -a Spotify desktop='^2' follow=on focus=on
 bspc rule -a discord  desktop='^2' follow=on focus=on
 bspc rule -a Rainbow\ Board desktop='^3'
 bspc rule -a Anki desktop='^3'
-bspc rule -a emacs desktop='^4'
+bspc rule -a Emacs desktop='^4'
