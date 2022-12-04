@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# File manager
+super + e
+  thunar
+
 # terminal emulator
 super + Return
 	kitty
@@ -52,6 +56,10 @@ super + g
 # state/flags
 #
 
+# Force all windows of the desktop to tile
+super + ctrl + t
+	bspcp tile
+
 # set to sticky 
 super + v
 	bspc node -g sticky
@@ -73,7 +81,7 @@ super + {_,shift + }{h,n,e,i}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
+super + alt + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
@@ -118,6 +126,38 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+# Extras for selecting
+
+# Split window vertically 
+super + v
+	bspc window -p right
+
+# Move tiled windows. Moving a tiled window to preselected one moves into preselection instead. 
+super + alt + shift + {h,n,e,i}
+	bspc config pointer_follows_focus true; \
+	swapOrMoveIn.sh {left,down,up,right}; \
+	bspc config pointer_follows_focus false
+  
+#
+# Layout manipulation/desktop level controls
+# ______________    
+	
+# Balance tree
+super + b
+	bspc desktop -B
+	
+# Undo balancing (equalize windows)
+super + ctrl + b
+	bspc desktop -E 
+
+# Mirror and flip leaves of tree
+super + {comma,period}
+	bspc desktop -F {horizontal,vertical}
+	
+# Rotate leaves of tree
+super + shift + {comma,period}
+	bspc desktop -R {90,270}
+
 #
 # move/resize
 #
@@ -133,6 +173,7 @@ super + alt + shift + {h,n,e,i}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
 #
 # Power
 #
@@ -168,6 +209,7 @@ alt + XF86AudioPrev
 
 alt + XF86AudioNext
 	playerctl --player=spotify,%any position 15+
+
 #
 # Brightness
 #

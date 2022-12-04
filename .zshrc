@@ -1,10 +1,5 @@
 # flex on the ubuntu
-neofetch
-
-# Enable colors and change prompt:
-autoload -U colors && colors
-
-setopt histignorealldups sharehistory
+uwufetch 
 
 # Use emacs keybindings even if our EDITOR is set to vi
 # bindkey -e
@@ -15,9 +10,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
-#autoload -Uz compinit
-#compinit
 
 #menu select
 zstyle ':completion:*' menu select
@@ -61,9 +53,6 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
-#load
-autoload -Uz compinit
-compinit
 
 # Alias
 # exa - ls
@@ -98,8 +87,8 @@ alias r='sudo apt remove'
 alias ra='sudo apt autoremove'
 
 # xclip
-alias "c=xclip"
-alias "v=xclip -o"
+alias c='xclip'
+alias v='xclip -o'
 
 # batcat
 alias cat='batcat --paging=auto --pager=less'
@@ -134,10 +123,15 @@ source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 	# symbol
 	SPACESHIP_CHAR_SYMBOL=■\ 
 
+  # Node
+  SPACESHIP_NODE_SHOW=false
+
 	# user
-	SPACESHIP_USER_SHOW=true
-	SPACESHIP_HOST_SHOW=true
+  SPACESHIP_USER_SHOW=always
+  SPACESHIP_USER_COLOR=green
 	SPACESHIP_DIR_SHOW=true
+	# SPACESHIP_USER_SHOW=true
+	# SPACESHIP_HOST_SHOW=always
 
 	# git
 	SPACESHIP_GIT_SHOW=true
