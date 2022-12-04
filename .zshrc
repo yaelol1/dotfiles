@@ -97,10 +97,12 @@ alias i='sudo apt install'
 alias r='sudo apt remove'
 alias ra='sudo apt autoremove'
 
+# xclip
+alias "c=xclip"
+alias "v=xclip -o"
 
 # batcat
 alias cat='batcat --paging=auto --pager=less'
-
 
 # Bare repo for dotfiles
 alias gitmain='/usr/bin/git --git-dir=/home/y421/.dotfiles/git --work-tree=/home/y421'
@@ -112,10 +114,16 @@ alias gitdoc='/usr/bin/git --git-dir=$HOME/Documents/.github --work-tree=$HOME/D
 alias startup='$HOME/.local/bin/startup'
 
 # Plugins
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-you-should-use/you-should-use.plugin.zsh
+source ~/.config/zsh/alias-tips/alias-tips.plugin.zsh
+source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-completions/zsh-completions.plugin.zsh
+source ~/.config/zsh/almostontop/almostontop.plugin.zsh
+source ~/.config/zsh/zsh-auto-notify/auto-notify.plugin.zsh
+source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Spaceship
 # Spaceship configuration
@@ -143,10 +151,17 @@ prompt spaceship
 # Spicetify
 export PATH=$PATH:/home/y421/.spicetify
 
+# Golang PATH
+export PATH=$PATH:/usr/local/go/bin
+
 #exccercism path
 export PATH=~/bin:$PATH
+
 # Syntax highlighting for man
 export PAGER="most"
+
+#.local to PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # bin in PATH
 export PATH=~/bin:$PATH
